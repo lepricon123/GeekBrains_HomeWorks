@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+//    2. Дописать игру “Угадай число” (по желанию)
+//    Сделать игру с двумя игроками с бесконечным числом попыток. Сделайте возможность выйти из игры.
+var not_end = true;
+var number, number1,number2;
+number = parseInt(Math.random()*100);
+console.log(number);
+while (not_end==true)
+{
+    var str = "";
+    number1 = +prompt("Первый игрок введите число");
+    number2 = +prompt("Второй игрок введите число");
+    if (parseInt(number1) != number)
+        str += "Первый игрок не угадал"+"\n";
+    else
+        str += "Первый игрок угадал" + "\n";
+    if (parseInt(number2) != number)
+        str += "Второй игрок не угадал";
+    else
+        str += "Второй игрок угадал";
+    alert(str);
+    if (confirm("Продолжить игру"))
+        not_end = true;
+    else
+        not_end = false;
+}
+
+</script>
+<body>
+
+</body>
+</html>
